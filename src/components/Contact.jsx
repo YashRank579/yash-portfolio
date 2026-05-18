@@ -1,21 +1,20 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMail, FiPhone, FiMapPin, FiSend, FiLinkedin, FiGithub } from 'react-icons/fi'
-import { SiLeetcode } from 'react-icons/si'
 
 const contactInfo = [
   {
     icon: FiMail,
     label: 'Email',
-    value: 'darshanbpatel228599@gmail.com',
-    href: 'mailto:darshanbpatel228599@gmail.com',
+    value: 'yashrank65@gmail.com',
+    href: 'mailto:yashrank65@gmail.com',
     color: '#f5a623',
   },
   {
     icon: FiPhone,
     label: 'Phone',
-    value: '+91 9909666439',
-    href: 'tel:+919909666439',
+    value: '+91 8320518873',
+    href: 'tel:+918320518873',
     color: '#8b5cf6',
   },
   {
@@ -28,9 +27,8 @@ const contactInfo = [
 ]
 
 const socials = [
-  { icon: FiLinkedin, href: 'https://linkedin.com/in/darshanpatel22', label: 'LinkedIn' },
-  { icon: FiGithub, href: 'https://github.com/Whodarshanpatel', label: 'GitHub' },
-  { icon: SiLeetcode, href: 'https://leetcode.com/u/whodarshanpatel/', label: 'LeetCode' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yash-rank-68a008350/', label: 'LinkedIn' },
+  { icon: FiGithub, href: 'https://github.com/YashRank579', label: 'GitHub' },
 ]
 
 export default function Contact() {
@@ -57,7 +55,7 @@ export default function Contact() {
     // Construct mailto link
     const subject = encodeURIComponent(form.subject || `Portfolio Contact from ${form.name}`);
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`);
-    const mailtoUrl = `mailto:darshanbpatel228599@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:yashrank65@gmail.com?subject=${subject}&body=${body}`;
 
     // Open mail client
     window.location.href = mailtoUrl;
@@ -104,8 +102,8 @@ export default function Contact() {
                 <span className="text-gradient">Together</span>
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                I'm currently open to internship and entry-level opportunities in backend development,
-                full-stack development, or DSA-focused roles. Feel free to reach out — I'd love to connect!
+                I'm currently open to internship and entry-level opportunities in Data Science,
+                Machine Learning, AI, or NLP-focused roles. Feel free to reach out — I'd love to connect!
               </p>
             </div>
 

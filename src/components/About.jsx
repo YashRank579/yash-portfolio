@@ -1,24 +1,24 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FiCode, FiDatabase, FiCpu, FiTarget } from 'react-icons/fi'
+import { FiCpu, FiDatabase, FiTrendingUp, FiTarget } from 'react-icons/fi'
 import profilePhoto from '../assets/profile.jpg'
 import resumePDF from '../assets/resume.pdf'
 
 const highlights = [
-  { icon: FiCode, label: 'Full Stack', desc: 'MERN & Python/Flask' },
-  { icon: FiDatabase, label: 'Backend', desc: 'Node.js, APIs, MySQL' },
-  { icon: FiCpu, label: 'DSA', desc: 'Problem Solving' },
-  { icon: FiTarget, label: 'CGPA', desc: '8.96 / 10.0' },
+  { icon: FiCpu, label: 'Machine Learning', desc: 'Scikit-learn, TensorFlow, PyTorch' },
+  { icon: FiDatabase, label: 'Data Science', desc: 'Pandas, NumPy, Visualization' },
+  { icon: FiTrendingUp, label: 'Deep Learning', desc: 'NLP, LSTM, Transformers' },
+  { icon: FiTarget, label: 'CGPA', desc: '8.83 / 10.0' },
 ]
 
 const infoItems = [
-  { label: 'Name', value: 'Darshan Patel' },
-  { label: 'Email', value: 'darshanbpatel228599@gmail.com' },
-  { label: 'Phone', value: '+91 9909666439' },
+  { label: 'Name', value: 'Yash Rank' },
+  { label: 'Email', value: 'yashrank65@gmail.com' },
+  { label: 'Phone', value: '+91 8320518873' },
   { label: 'Location', value: 'Vadodara, India' },
   { label: 'University', value: 'Parul University' },
-  { label: 'Degree', value: 'B.Tech CSE (2023–2027)' },
-  { label: 'CGPA', value: '8.96 / 10.0' },
+  { label: 'Degree', value: 'B.Tech CSE (2023–Present)' },
+  { label: 'CGPA', value: '8.83 / 10.0' },
   { label: 'Available', value: 'Open to Opportunities' },
 ]
 
@@ -70,7 +70,7 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden border border-yellow-500/20 glow-border">
                 <img
                   src={profilePhoto}
-                  alt="Darshan Patel"
+                  alt="Yash Rank"
                   className="w-full aspect-[3/4] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#060d1f]/60 to-transparent" />
@@ -84,7 +84,7 @@ export default function About() {
             </motion.div>
 
             {/* Highlight cards */}
-            <motion.div variants={itemVariants} className="grid grid-cols-2 gap-3 mt-10">
+            <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-10">
               {highlights.map(({ icon: Icon, label, desc }) => (
                 <div
                   key={label}
@@ -110,25 +110,25 @@ export default function About() {
           >
             <motion.h3 variants={itemVariants} className="text-2xl font-bold text-white mb-2">
               Hi There! I'm{' '}
-              <span className="text-gradient">Darshan Patel</span>
+              <span className="text-gradient">Yash Rank</span>
             </motion.h3>
             <motion.p variants={itemVariants} className="text-yellow-400 font-medium mb-5">
-              Computer Science Engineer / Full Stack Developer
+              Data Science & Machine Learning Engineer
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-400 leading-relaxed mb-4">
               I'm a Computer Science undergraduate at{' '}
               <span className="text-white font-medium">Parul University</span> with a strong
-              foundation in Data Structures & Algorithms, Object-Oriented Programming, and
-              full-stack development using the MERN stack.
+              passion for Data Science, Machine Learning, and Artificial Intelligence. I qualified
+              GATE 2026 in Data Science & AI and am preparing for GATE 2027.
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-400 leading-relaxed mb-8">
-              My focus lies primarily in{' '}
-              <span className="text-yellow-400 font-medium">backend systems</span> —
-              designing RESTful APIs, managing databases, and optimizing application performance.
-              I love tackling complex problems and building efficient, scalable solutions that
-              make a real-world impact.
+              My focus lies in{' '}
+              <span className="text-yellow-400 font-medium">building intelligent ML models</span> —
+              from NLP systems like next-word prediction to classification models for real-world
+              applications. I'm currently exploring Generative AI with RAG and Agentic AI
+              for autonomous workflows.
             </motion.p>
 
             {/* Info Grid */}
@@ -145,11 +145,11 @@ export default function About() {
             </motion.div>
 
             {/* CTA */}
-            <motion.div variants={itemVariants} className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
               <a
                 href={resumePDF}
-                download="DarshanPatel_Resume.pdf"
-                className="btn-primary text-[#020816] font-bold text-sm"
+                download="YashRank_Resume.pdf"
+                className="btn-primary text-[#020816] font-bold text-sm text-center"
               >
                 Download Resume
               </a>

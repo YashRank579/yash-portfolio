@@ -5,53 +5,50 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 const projects = [
   {
     id: 1,
-    title: 'Customer Rewards Dashboard',
-    category: 'Full Stack',
+    title: 'Next Word Prediction',
+    category: 'NLP / Deep Learning',
     description:
-      'A comprehensive dashboard to visualize user activity and rewards data. Features interactive charts, real-time API-based dynamic data rendering, and an intuitive rewards tracking system with drill-down analytics.',
-    tech: ['React', 'Recharts', 'REST APIs', 'JavaScript', 'CSS'],
+      'A Machine Learning-based NLP system that predicts the next word in a sentence using trained language models to understand contextual text patterns. Features real-time interaction through a Streamlit UI.',
+    tech: ['Python', 'TensorFlow', 'LSTM', 'NLTK', 'Streamlit'],
     color: '#f5a623',
     featured: true,
-    github: 'https://github.com/Whodarshanpatel',
-    live: '#',
+    github: 'https://github.com/YashRank579/Next_word_prediction',
     highlights: [
-      'Built interactive reward visualization charts',
-      'Integrated API-based dynamic data rendering',
-      'Implemented responsive design for all screen sizes',
+      'Developed next-word prediction using LSTM / Transformer / N-gram models',
+      'Implemented tokenization, padding, and sequence generation pipeline',
+      'Built real-time prediction UI with Streamlit for interactive text generation',
     ],
   },
   {
     id: 2,
-    title: 'Restaurant Offer Finder',
-    category: 'Frontend',
+    title: 'Loan Default Prediction',
+    category: 'Machine Learning',
     description:
-      'A user-friendly platform to explore and filter restaurant offers intelligently. Features a smooth search and filter system with optimized rendering performance and mobile-first responsive design.',
-    tech: ['React', 'JavaScript', 'CSS', 'Responsive Design'],
+      'A Machine Learning-based classification system that predicts whether a loan applicant is likely to default using historical financial data and statistical modeling with 88% accuracy.',
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Jupyter'],
     color: '#8b5cf6',
     featured: true,
-    github: 'https://github.com/Whodarshanpatel',
-    live: '#',
+    github: 'https://github.com/YashRank579/Loan_Default_prediction',
     highlights: [
-      'Built dynamic search and filter functionality',
-      'Optimized performance with efficient rendering',
-      'Implemented mobile-first responsive UI',
+      'Built predictive model using Logistic Regression for default risk classification',
+      'Performed data cleaning, preprocessing, and feature engineering',
+      'Achieved 88% accuracy with comprehensive evaluation metrics',
     ],
   },
   {
     id: 3,
-    title: 'Portfolio Website',
-    category: 'Full Stack',
+    title: 'Email Spam Prediction',
+    category: 'Machine Learning',
     description:
-      'A professional personal portfolio website showcasing projects, skills, and experience. Built with dark mode support, smooth animations, modern glassmorphism design, and fully optimized for performance.',
-    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+      'A Machine Learning-based text classification system that detects whether an email is Spam or Ham using TF-IDF features and a Support Vector Classifier for accurate spam filtering.',
+    tech: ['Python', 'Scikit-learn', 'TF-IDF', 'SVC', 'NLTK'],
     color: '#06b6d4',
-    featured: false,
-    github: 'https://github.com/Whodarshanpatel',
-    live: '#',
+    featured: true,
+    github: 'https://github.com/YashRank579/Email_spam_prediction',
     highlights: [
-      'Dark mode with premium glassmorphism UI',
-      'Smooth Framer Motion animations',
-      'Fully responsive across all devices',
+      'Performed text preprocessing: tokenization, stopword removal, stemming',
+      'Converted text to numerical features using TF-IDF vectorization',
+      'Evaluated using Accuracy, Precision, Recall, F1-score & Confusion Matrix',
     ],
   },
 ]
@@ -139,18 +136,22 @@ function ProjectCard({ project, index, inView }) {
             <FiGithub size={15} />
             Code
           </a>
-          <a
-            href={project.live}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-            style={{
-              background: `${project.color}20`,
-              color: project.color,
-              border: `1px solid ${project.color}40`,
-            }}
-          >
-            <FiExternalLink size={15} />
-            Live Demo
-          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+              style={{
+                background: `${project.color}20`,
+                color: project.color,
+                border: `1px solid ${project.color}40`,
+              }}
+            >
+              <FiExternalLink size={15} />
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
 
@@ -193,8 +194,8 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-gray-400 max-w-2xl mx-auto mb-16"
         >
-          A selection of projects that reflect my skills in backend development,
-          API integration, and full-stack web development.
+          A selection of projects that showcase my skills in Machine Learning,
+          NLP, Deep Learning, and data-driven application development.
         </motion.p>
 
         {/* Projects Grid */}
@@ -213,7 +214,7 @@ export default function Projects() {
         >
           <p className="text-gray-400 mb-4">Want to see more of my work?</p>
           <a
-            href="https://github.com/Whodarshanpatel"
+            href="https://github.com/YashRank579"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 btn-outline"

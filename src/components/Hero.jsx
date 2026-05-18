@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiArrowDown } from 'react-icons/fi'
-import { SiLeetcode } from 'react-icons/si'
 import profilePhoto from '../assets/profile.jpg'
 
 const TYPING_TEXTS = [
-  'Full Stack Developer',
-  'Backend Engineer',
-  'DSA Enthusiast',
-  'MERN Stack Developer',
-  'Problem Solver',
+  'Data Science Enthusiast',
+  'Machine Learning Engineer',
+  'Deep Learning Explorer',
+  'NLP Specialist',
+  'Generative AI Builder',
 ]
 
 export default function Hero() {
@@ -65,7 +64,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 sm:pt-20 sm:pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[85vh]">
           {/* Left: Text Content */}
           <motion.div
@@ -84,7 +83,7 @@ export default function Hero() {
             <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
               Hi, I'm{' '}
               <span className="text-gradient block sm:inline">
-                Darshan Patel
+                Yash Rank
               </span>
             </motion.h1>
 
@@ -96,27 +95,26 @@ export default function Hero() {
 
             {/* Description */}
             <motion.p variants={itemVariants} className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
-              Computer Science undergraduate skilled in{' '}
-              <span className="text-yellow-400 font-medium">DSA</span>,{' '}
-              <span className="text-yellow-400 font-medium">OOP</span>, and full-stack development{' '}
-              with a focus on{' '}
-              <span className="text-yellow-400 font-medium">backend systems</span>{' '}
-              and scalable architecture.
+              B.Tech Computer Science undergraduate passionate about{' '}
+              <span className="text-yellow-400 font-medium">Data Science</span>,{' '}
+              <span className="text-yellow-400 font-medium">Machine Learning</span>, and{' '}
+              <span className="text-yellow-400 font-medium">Generative AI</span>{' '}
+              — building intelligent solutions with deep learning & NLP.
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10">
               <button
                 id="hero-portfolio-btn"
                 onClick={() => scrollTo('projects')}
-                className="btn-primary text-[#020816] font-bold"
+                className="btn-primary text-[#020816] font-bold w-full sm:w-auto"
               >
                 View Portfolio
               </button>
               <button
                 id="hero-contact-btn"
                 onClick={() => scrollTo('contact')}
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto"
               >
                 Contact Me
               </button>
@@ -126,9 +124,8 @@ export default function Hero() {
             <motion.div variants={itemVariants} className="flex items-center gap-5">
               <span className="text-gray-500 text-sm">Find me on:</span>
               {[
-                { icon: FiLinkedin, href: 'https://linkedin.com/in/darshanpatel22', label: 'LinkedIn' },
-                { icon: FiGithub, href: 'https://github.com/Whodarshanpatel', label: 'GitHub' },
-                { icon: SiLeetcode, href: 'https://leetcode.com/u/whodarshanpatel/', label: 'LeetCode' },
+                { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yash-rank-68a008350/', label: 'LinkedIn' },
+                { icon: FiGithub, href: 'https://github.com/YashRank579', label: 'GitHub' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -144,11 +141,11 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={itemVariants} className="flex gap-8 mt-10 pt-8 border-t border-white/10">
+            <motion.div variants={itemVariants} className="flex flex-wrap sm:flex-nowrap gap-4 sm:gap-8 mt-10 pt-8 border-t border-white/10">
               {[
-                { label: 'CGPA', value: '8.96' },
+                { label: 'CGPA', value: '8.83' },
                 { label: 'Projects', value: '3+' },
-                { label: 'DSA Problems', value: '100+' },
+                { label: 'GATE 2026', value: 'Qualified' },
               ].map(({ label, value }) => (
                 <div key={label} className="text-center">
                   <div className="text-2xl font-black text-gradient">{value}</div>
@@ -178,7 +175,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent z-10" />
                 <img
                   src={profilePhoto}
-                  alt="Darshan Patel - Full Stack Developer"
+                  alt="Yash Rank - Data Science & ML Engineer"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -190,7 +187,7 @@ export default function Hero() {
                 className="absolute -left-8 top-1/4 glass-card px-3 py-2 rounded-xl border border-yellow-500/20 hover:transform-none"
               >
                 <div className="text-xs text-gray-400">CGPA</div>
-                <div className="text-yellow-400 font-bold text-lg">8.96</div>
+                <div className="text-yellow-400 font-bold text-lg">8.83</div>
               </motion.div>
 
               <motion.div
@@ -199,7 +196,7 @@ export default function Hero() {
                 className="absolute -right-6 bottom-1/3 glass-card px-3 py-2 rounded-xl border border-yellow-500/20 hover:transform-none"
               >
                 <div className="text-xs text-gray-400">Stack</div>
-                <div className="text-yellow-400 font-bold text-sm">MERN</div>
+                <div className="text-yellow-400 font-bold text-sm">AI/ML</div>
               </motion.div>
 
               <motion.div
@@ -208,7 +205,7 @@ export default function Hero() {
                 className="absolute -right-4 top-8 glass-card px-3 py-2 rounded-xl border border-yellow-500/20 hover:transform-none"
               >
                 <div className="text-xs text-gray-400">Focus</div>
-                <div className="text-yellow-400 font-bold text-sm">Backend</div>
+                <div className="text-yellow-400 font-bold text-sm">Data Science</div>
               </motion.div>
             </div>
           </motion.div>
@@ -221,7 +218,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 hover:text-yellow-400 transition-colors"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-gray-500 hover:text-yellow-400 transition-colors hidden sm:flex"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
         <FiArrowDown size={18} />

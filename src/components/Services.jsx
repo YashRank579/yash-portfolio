@@ -1,51 +1,44 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FiServer, FiCode, FiGitBranch, FiLayout } from 'react-icons/fi'
-import { MdOutlineApi } from 'react-icons/md'
+import { FiCpu, FiTrendingUp, FiLayout } from 'react-icons/fi'
 import { BiBrain } from 'react-icons/bi'
+import { MdOutlineAutoAwesome } from 'react-icons/md'
 
 const services = [
   {
-    icon: FiServer,
-    title: 'Backend Development',
-    color: '#f5a623',
-    desc: 'Building robust, scalable server-side applications using Python/Flask and Node.js. Focused on performance, security, and clean architecture.',
-    tags: ['Python', 'Flask', 'Node.js', 'MySQL'],
-  },
-  {
-    icon: MdOutlineApi,
-    title: 'API Development',
-    color: '#8b5cf6',
-    desc: 'Designing and implementing RESTful APIs that are well-structured, documented, and easy to integrate with any frontend or third-party service.',
-    tags: ['REST APIs', 'JSON', 'Postman', 'Integration'],
-  },
-  {
     icon: BiBrain,
-    title: 'Problem Solving (DSA)',
+    title: 'Machine Learning',
+    color: '#f5a623',
+    desc: 'Building predictive models using classification, regression, and clustering techniques with Scikit-learn, achieving high accuracy on real-world datasets.',
+    tags: ['Scikit-learn', 'Logistic Regression', 'SVC', 'Random Forest'],
+  },
+  {
+    icon: FiCpu,
+    title: 'Deep Learning & NLP',
+    color: '#8b5cf6',
+    desc: 'Developing deep learning models for NLP tasks including next-word prediction using LSTM and Transformer architectures with TensorFlow and PyTorch.',
+    tags: ['TensorFlow', 'PyTorch', 'LSTM', 'NLP', 'NLTK'],
+  },
+  {
+    icon: MdOutlineAutoAwesome,
+    title: 'Generative AI & RAG',
     color: '#06b6d4',
-    desc: 'Strong algorithmic thinking with expertise in data structures, complexity analysis, and solving competitive programming problems efficiently.',
-    tags: ['DSA', 'LeetCode', 'Algorithms', 'Optimization'],
+    desc: 'Building Retrieval-Augmented Generation (RAG) systems and exploring Agentic AI patterns for autonomous, intelligent workflows using LangChain.',
+    tags: ['LangChain', 'RAG', 'Agentic AI', 'LLMs'],
+  },
+  {
+    icon: FiTrendingUp,
+    title: 'Data Analysis & Visualization',
+    color: '#10b981',
+    desc: 'Performing end-to-end data analysis — from cleaning and preprocessing to visualization with Matplotlib, Seaborn, Tableau, and Power BI for actionable insights.',
+    tags: ['Pandas', 'Matplotlib', 'Seaborn', 'Tableau', 'Power BI'],
   },
   {
     icon: FiLayout,
-    title: 'Full Stack Web Dev',
-    color: '#10b981',
-    desc: 'End-to-end web development using the MERN stack. Building interactive UIs with React and connecting them to powerful backend services.',
-    tags: ['React', 'MongoDB', 'Express', 'Node.js'],
-  },
-  {
-    icon: FiCode,
-    title: 'Frontend Development',
+    title: 'Agentic AI',
     color: '#f43f5e',
-    desc: 'Crafting responsive, pixel-perfect UIs using HTML, CSS, JavaScript, and React. Focused on performance and exceptional user experience.',
-    tags: ['React', 'JavaScript', 'CSS', 'Responsive'],
-  },
-  {
-    icon: FiGitBranch,
-    title: 'Version Control & Deploy',
-    color: '#f59e0b',
-    desc: 'Proficient with Git workflows for collaboration and deployment pipelines. Deploying projects to Vercel with CI/CD practices.',
-    tags: ['Git', 'GitHub', 'Vercel', 'CI/CD'],
+    desc: 'Designing and building autonomous AI agents that can reason, plan, and execute multi-step tasks independently — leveraging tool use, memory, and self-reflection for intelligent workflows.',
+    tags: ['LangChain', 'AI Agents', 'Tool Use', 'Autonomous Workflows'],
   },
 ]
 
@@ -69,9 +62,8 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <span className="text-yellow-400 font-medium tracking-widest uppercase text-sm">What I Offer</span>
           <h2 className="section-heading mt-2 text-white">
-            My <span className="text-gradient">Services</span>
+            Technical <span className="text-gradient">Expertise</span>
           </h2>
           <div className="mt-4 w-16 h-1 gold-gradient rounded-full mx-auto" />
         </motion.div>
@@ -82,12 +74,12 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-gray-400 max-w-2xl mx-auto mb-16"
         >
-          Areas where I bring value — from designing efficient backend systems
-          to building polished full-stack applications.
+          Areas where I bring value — from building intelligent ML models
+          to crafting data-driven insights and AI-powered applications.
         </motion.p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {services.map((service, idx) => {
             const Icon = service.icon
             return (
@@ -96,7 +88,7 @@ export default function Services() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="glass-card p-6 rounded-2xl group cursor-default relative overflow-hidden"
+                className="glass-card p-6 rounded-2xl group cursor-default relative overflow-hidden w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 {/* Corner accent */}
                 <div

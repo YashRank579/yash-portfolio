@@ -3,44 +3,47 @@ import { motion, useInView } from 'framer-motion'
 
 const skillCategories = [
   {
-    title: 'DSA & Core CS',
+    title: 'Machine Learning & AI',
     color: '#f5a623',
     skills: [
-      { name: 'Data Structures & Algorithms', level: 80 },
-      { name: 'OOP Concepts', level: 85 },
-      { name: 'DBMS', level: 78 },
-      { name: 'Computer Networks', level: 72 },
+      { name: 'Scikit-learn', level: 85 },
+      { name: 'TensorFlow', level: 78 },
+      { name: 'PyTorch', level: 75 },
+      { name: 'LangChain / RAG', level: 70 },
+      { name: 'LangGraph', level: 65 },
     ],
   },
   {
-    title: 'Backend Development',
+    title: 'Data Science & Analytics',
     color: '#8b5cf6',
     skills: [
-      { name: 'Python / Flask', level: 82 },
-      { name: 'Node.js', level: 68 },
-      { name: 'MySQL', level: 78 },
-      { name: 'MongoDB', level: 65 },
-      { name: 'REST APIs', level: 80 },
+      { name: 'Python', level: 90 },
+      { name: 'NumPy & Pandas', level: 88 },
+      { name: 'Matplotlib & Seaborn', level: 82 },
+      { name: 'Tableau / Power BI', level: 72 },
+      { name: 'Statistics & Probability', level: 80 },
     ],
   },
   {
-    title: 'Frontend',
+    title: 'Programming & Web',
     color: '#06b6d4',
     skills: [
-      { name: 'HTML & CSS', level: 90 },
-      { name: 'JavaScript', level: 82 },
-      { name: 'React.js', level: 72 },
-      { name: 'Responsive Design', level: 85 },
+      { name: 'Python', level: 90 },
+      { name: 'C / C++', level: 75 },
+      { name: 'Java', level: 70 },
+      { name: 'HTML + CSS', level: 80 },
+      { name: 'Flask', level: 72 },
     ],
   },
   {
-    title: 'Tools & DevOps',
+    title: 'Tools & Cloud',
     color: '#10b981',
     skills: [
-      { name: 'Git & GitHub', level: 88 },
-      { name: 'Vercel', level: 82 },
-      { name: 'REST API Design', level: 80 },
-      { name: 'VS Code', level: 92 },
+      { name: 'Git & GitHub', level: 85 },
+      { name: 'Jupyter Lab', level: 90 },
+      { name: 'VS Code', level: 88 },
+      { name: 'AWS', level: 60 },
+      { name: 'MySQL / MongoDB', level: 75 },
     ],
   },
 ]
@@ -87,8 +90,9 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   const techStack = [
-    'Python', 'JavaScript', 'React', 'Node.js', 'Flask', 'MySQL',
-    'MongoDB', 'HTML/CSS', 'Git', 'Vercel', 'REST APIs', 'DSA',
+    'Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy',
+    'LangChain', 'Flask', 'Streamlit', 'NLTK', 'spaCy', 'MySQL',
+    'MongoDB', 'AWS', 'Git', 'Tableau', 'Power BI', 'Excel',
   ]
 
   return (
@@ -117,8 +121,8 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-gray-400 max-w-2xl mx-auto mb-16"
         >
-          All the skills I've developed through academic learning, personal projects,
-          and real-world problem solving — with a strong focus on backend & DSA.
+          All the skills I've developed through academic learning, certifications,
+          and hands-on projects — with a strong focus on Machine Learning, Deep Learning & Data Science.
         </motion.p>
 
         {/* Skill Categories Grid */}

@@ -1,5 +1,4 @@
 import { FiGithub, FiLinkedin, FiHeart } from 'react-icons/fi'
-import { SiLeetcode } from 'react-icons/si'
 import logoImg from '../assets/logo.png'
 
 export default function Footer() {
@@ -19,9 +18,8 @@ export default function Footer() {
   ]
 
   const socials = [
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/darshanpatel22', label: 'LinkedIn' },
-    { icon: FiGithub, href: 'https://github.com/Whodarshanpatel', label: 'GitHub' },
-    { icon: SiLeetcode, href: 'https://leetcode.com/u/whodarshanpatel/', label: 'LeetCode' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yash-rank-68a008350/', label: 'LinkedIn' },
+    { icon: FiGithub, href: 'https://github.com/YashRank579', label: 'GitHub' },
   ]
 
   return (
@@ -35,17 +33,17 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={logoImg}
-                alt="Darshan Patel Logo"
+                alt="Yash Rank Logo"
                 className="w-10 h-10 rounded-xl object-cover shadow-lg"
                 style={{ boxShadow: '0 0 12px rgba(245,166,35,0.4)' }}
               />
               <span className="font-bold text-white text-lg">
-                Darshan<span className="text-yellow-400">.</span>
+                Yash<span className="text-yellow-400">.</span>
               </span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Computer Science Engineer focused on backend development,
-              DSA, and building scalable full-stack applications.
+              Data Science & Machine Learning Engineer focused on building
+              intelligent AI solutions with Deep Learning, NLP & Generative AI.
             </p>
           </div>
 
@@ -70,8 +68,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-sm text-gray-500">
-              <p>darshanbpatel228599@gmail.com</p>
-              <p>+91 9909666439</p>
+              <p>yashrank65@gmail.com</p>
+              <p>+91 8320518873</p>
               <p>Vadodara, Gujarat, India</p>
             </div>
             <div className="flex gap-3 mt-4">
@@ -94,7 +92,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            © {year} Darshan Patel. All rights reserved.
+            © {year} Yash Rank. All rights reserved.
           </p>
           <p className="text-gray-600 text-sm flex items-center gap-1">
             Made with <FiHeart className="text-yellow-400 mx-1" size={14} /> using React & Tailwind CSS

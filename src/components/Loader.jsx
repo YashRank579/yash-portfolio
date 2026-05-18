@@ -19,7 +19,7 @@ export default function Loader() {
         >
           <img
             src={logoImg}
-            alt="Darshan Patel"
+            alt="Yash Rank"
             className="w-20 h-20 rounded-2xl object-cover mx-auto"
             style={{ boxShadow: '0 0 30px rgba(245,166,35,0.4)' }}
           />

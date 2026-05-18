@@ -99,12 +99,12 @@ export default function Navbar() {
             >
               <img
                 src={logoImg}
-                alt="Darshan Patel Logo"
+                alt="Yash Rank Logo"
                 className="w-10 h-10 rounded-xl object-cover group-hover:scale-110 transition-transform duration-300 shadow-lg"
                 style={{ boxShadow: '0 0 12px rgba(245,166,35,0.4)' }}
               />
               <span className="font-bold text-white text-lg hidden sm:block group-hover:text-yellow-400 transition-colors">
-                Darshan<span className="text-yellow-400">.</span>
+                Yash<span className="text-yellow-400">.</span>
               </span>
             </button>
           </div>
