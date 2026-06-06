@@ -16,8 +16,8 @@ const services = [
     icon: FiCpu,
     title: 'Deep Learning & NLP',
     color: '#8b5cf6',
-    desc: 'Developing deep learning models for NLP tasks including next-word prediction using LSTM and Transformer architectures with TensorFlow and PyTorch.',
-    tags: ['TensorFlow', 'PyTorch', 'LSTM', 'NLP', 'NLTK'],
+    desc: 'Developing deep learning models for NLP tasks, custom chatbots, and audio transcription systems using Transformer architectures and custom speech-to-text pipelines.',
+    tags: ['TensorFlow', 'PyTorch', 'Whisper', 'NLP', 'FAISS'],
   },
   {
     icon: MdOutlineAutoAwesome,

@@ -126,8 +126,8 @@ export default function About() {
             <motion.p variants={itemVariants} className="text-gray-400 leading-relaxed mb-8">
               My focus lies in{' '}
               <span className="text-yellow-400 font-medium">building intelligent ML models</span> —
-              from NLP systems like next-word prediction to classification models for real-world
-              applications. I'm currently exploring Generative AI with RAG and Agentic AI
+              from Agentic AI systems like multi-agent business analyst tools to advanced RAG pipelines
+              and Q&A systems. I'm currently exploring Generative AI with RAG and Agentic AI
               for autonomous workflows.
             </motion.p>
 
