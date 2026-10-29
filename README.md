@@ -1,4 +1,4 @@
-# Darshan Patel — Personal Portfolio Website
+# Yash Rank — Personal Portfolio Website
 
 A modern, premium personal portfolio website built with **React + Vite + Tailwind CSS + Framer Motion**.
 
